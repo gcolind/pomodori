@@ -1,0 +1,26 @@
+$main-red:#CC2114;
+$secondary-red:#FF2919;
+$subtle-grey:#ECECEC;
+
+html {
+	position:relative;
+	min-height: 100%;
+}
+
+body {
+	/* Margin bottom by footer height */
+	margin-bottom:60px;
+}
+
+/*------------------------------------------------------/
+/ Styles for sticky footer----/
+/------------------------------------------------------*/
+
+footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	/* Set fixed height of the footer here */
+	height:60px;
+	background:$subtle-grey;
+}
