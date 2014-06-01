@@ -9,6 +9,8 @@ var timer = null;
 /*------------------------------------------------------/
 / Variables for counter set buttons --------------------/
 /------------------------------------------------------*/
+var start_btn = document.getElementById("start");
+var stop_btn = document.getElementById("stop");
 var pomodori_btn = document.getElementById("pomodori");
 var break_long_btn = document.getElementById("break_long");
 var break_short_btn = document.getElementById("break_short");
@@ -22,6 +24,9 @@ pomodori_btn.onclick = function() {
     
     // Display the reset time
     reset();
+
+    // Re-enable start button
+    start_btn.disabled = false;
 };
 
 break_long_btn.onclick = function() {
@@ -30,6 +35,9 @@ break_long_btn.onclick = function() {
     
     // Display the reset time
     reset();
+
+    // Re-enable start button
+    start_btn.disabled = false;
 };
 
 break_short_btn.onclick = function() {
@@ -38,6 +46,9 @@ break_short_btn.onclick = function() {
     
     // Display the reset time
     reset();
+
+    // Re-enable start button
+    start_btn.disabled = false;
 };
 
 /*------------------------------------------------------/
@@ -46,7 +57,7 @@ break_short_btn.onclick = function() {
 function decTime(){    
     counter = counter - 1;
     
-    if(counter === 0){
+    if(counter <= 0){
         var minutes = 0;
         var seconds = 0;
         $("#clock").html("0" + minutes + ":0" + seconds);
@@ -76,12 +87,18 @@ clearInterval(timer);
     if(seconds < 10){seconds = "0" + seconds;}
     if(minutes < 10){minutes = "0" + minutes;}
     $("#clock").html(minutes + ":" + seconds);
+
+    start_btn.disabled = false;
 }
 
 function startInterval(){
     timer= setInterval("decTime()", 1000);
+
+    start_btn.disabled = true;
 }
 
 function stopInterval(){
     clearInterval(timer);
+
+    start_btn.disabled = false;
 }
