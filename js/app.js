@@ -1,13 +1,87 @@
-// Javascript for Pomodori 
-// Problem: How to display a timer 20 - 30 minutues (as assigned by the user) / 5 - 15 break timer
+/*------------------------------------------------------/
+/ Variables for counter, timer(setInverval),user sel----/
+/------------------------------------------------------*/
+var counter = 1500; // default to 25 mins (25 * 60)
+var counter_user_select = counter; // 25 default
+var timer = null;
 
-var time; // Variable to hold displayable time
-var minutes; // variable to hold minutes
-var seconds; // variable to hold seconds
 
-// From user input, gather the time in seconds
-function getTimeSeconds(uinput){
-	minutes = uinput;
-	seconds = uinput * 60; // Formated time, to be returned by the function (user input (which is in minutes) * 60 to get seconds)
-	return seconds;
+/*------------------------------------------------------/
+/ Variables for counter set buttons --------------------/
+/------------------------------------------------------*/
+var pomodori_btn = document.getElementById("pomodori");
+var break_long_btn = document.getElementById("break_long");
+var break_short_btn = document.getElementById("break_short");
+
+/*------------------------------------------------------/
+/ Counter set value on click of btns--------------------/
+/------------------------------------------------------*/
+pomodori_btn.onclick = function() {
+    counter = 1500;
+    counter_user_select = counter;
+    
+    // Display the reset time
+    reset();
+};
+
+break_long_btn.onclick = function() {
+    counter = 600;
+    counter_user_select = counter;
+    
+    // Display the reset time
+    reset();
+};
+
+break_short_btn.onclick = function() {
+    counter = 300;
+    counter_user_select = counter;
+    
+    // Display the reset time
+    reset();
+};
+
+/*------------------------------------------------------/
+/ Function in charge of decrementing time in seconds----/
+/------------------------------------------------------*/
+function decTime(){    
+    counter = counter - 1;
+    
+    if(counter === 0){
+        var minutes = 0;
+        var seconds = 0;
+        $("#clock").html("0" + minutes + ":0" + seconds);
+    }
+    else {
+        var minutes = Math.floor(counter / 60);
+        var seconds = counter - minutes * 60;
+        
+        if(seconds < 10){seconds = "0" + seconds;}
+        if(minutes < 10){minutes = "0" + minutes;}
+        
+        $("#clock").html(minutes + ":" + seconds);
+    }
+}
+
+/*------------------------------------------------------/
+/ Timekeeping functions, start stop reset --------------/
+/------------------------------------------------------*/
+
+function reset(){
+clearInterval(timer);
+    counter = counter_user_select;
+    
+    // Display the reset time
+    var minutes = Math.floor(counter / 60);
+    var seconds = counter - minutes * 60;
+    if(seconds < 10){seconds = "0" + seconds;}
+    if(minutes < 10){minutes = "0" + minutes;}
+    $("#clock").html(minutes + ":" + seconds);
+}
+
+function startInterval(){
+    timer= setInterval("decTime()", 1000);
+}
+
+function stopInterval(){
+    clearInterval(timer);
 }
