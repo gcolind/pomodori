@@ -11,12 +11,20 @@
 
 <section class="timer-section">
 	<div class="container">
-		
+		<div id="clock">25:00</div>
+		<div id="buttons" class="clear">
+		    <button id="start" onClick="startInterval()">start</button>
+		    <button id="stop" onClick="stopInterval()">stop</button>
+		    <button id="reset" onClick="reset()">reset</button>
+		    <button id="pomodori">Pomodori</button>
+		    <button id="break_long">Break Long</button>
+		    <button id="break_short">Break Short</button>
+		</div>
 	</div>
 </section>
 
-<script src="js/app.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!-- JQUERY -->
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> <!-- Bootstrap Core Javascript -->
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/app.js"></script><!-- Custom JS -->
 </body>
 </html>
