@@ -1,6 +1,15 @@
-$main-red:#CC2114;
+/* Reds and Greys */
+$main-red:#FF554C;
 $secondary-red:#FF2919;
-$subtle-grey:#ECECEC;
+$dark-grey:#424242; /* Used for text color */
+
+/* Button Colors */
+$start-green:#197F3C;
+$start-green-hover:#469862;
+$stop-red:#CC1D25;
+$stop-red-hover:#D64A50;
+$subtle-grey-button:#ECECEC;  /* Background color of grey buttons */
+$grey-button-hover:#BCBCBC;
 
 html {
 	position:relative;
@@ -8,19 +17,89 @@ html {
 }
 
 body {
-	/* Margin bottom by footer height */
 	margin-bottom:60px;
 }
 
 /*------------------------------------------------------/
-/ Styles for sticky footer----/
+/ Styles for jumbotron ---------------------------------/
+/------------------------------------------------------*/
+
+.jumbotron{
+	background:white;
+
+	h1{
+		color:$main-red;
+	}
+}
+
+/*------------------------------------------------------/
+/ Styles for clock section -----------------------------/
+/------------------------------------------------------*/
+
+#clock{
+
+	font-size: 5em;
+	color:$dark-grey;
+
+}
+
+button {
+	border:none;
+	border-radius:5px;
+
+	height:50px;
+	width:100px;
+}
+
+#buttons {
+	
+	#reset,
+	#pomodori,
+	#break_short,
+	#break_long{
+		background:$subtle-grey-button;
+		color:$dark-grey;
+	}
+
+	#start{
+		background:$start-green;
+		color:white;
+	}
+
+	#stop{
+		background:$stop-red;
+		color:white;
+	}
+
+	#start:hover{
+		background:$start-green-hover;
+	}
+
+	#stop:hover{
+		background:$stop-red-hover;
+	}
+
+	#reset:hover,
+	#pomodori:hover,
+	#break_short:hover,
+	#break_long:hover{
+		background:$grey-button-hover;
+	}
+}
+
+/*------------------------------------------------------/
+/ Styles for sticky footer -----------------------------/
 /------------------------------------------------------*/
 
 footer {
 	position:absolute;
 	bottom:0;
 	width:100%;
-	/* Set fixed height of the footer here */
 	height:60px;
-	background:$subtle-grey;
+	background:$main-red;
+
+	p{
+		padding:15px;
+		color:white;
+	}
 }
