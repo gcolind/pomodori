@@ -26,9 +26,17 @@ body {
 
 .jumbotron{
 	background:white;
+	margin:0 0 0 0;
+	padding:0 0 0 0;
 
 	h1{
 		color:$main-red;
+		display: inline;
+		vertical-align: middle;
+	}
+
+	img {
+		display:inline;
 	}
 }
 
@@ -38,7 +46,7 @@ body {
 
 #clock{
 
-	font-size: 5em;
+	font-size: 7em;
 	color:$dark-grey;
 
 }

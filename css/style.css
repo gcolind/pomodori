@@ -13,15 +13,21 @@ body {
 / Styles for jumbotron ---------------------------------/
 /------------------------------------------------------*/
 .jumbotron {
-  background: white; }
+  background: white;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0; }
   .jumbotron h1 {
-    color: #ff554c; }
+    color: #ff554c;
+    display: inline;
+    vertical-align: middle; }
+  .jumbotron img {
+    display: inline; }
 
 /*------------------------------------------------------/
 / Styles for clock section -----------------------------/
 /------------------------------------------------------*/
 #clock {
-  font-size: 5em;
+  font-size: 7em;
   color: #424242; }
 
 button {
