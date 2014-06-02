@@ -7,7 +7,8 @@ html {
   min-height: 100%; }
 
 body {
-  margin-bottom: 60px; }
+  margin-bottom: 100px;
+  font-family: 'Roboto', sans-serif; }
 
 /*------------------------------------------------------/
 / Styles for jumbotron ---------------------------------/
@@ -15,14 +16,15 @@ body {
 .jumbotron {
   background: white;
   margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  /*img {
-  	display:inline;
-  }*/ }
+  padding: 0 0 0 0; }
   .jumbotron h1 {
     color: #ff554c;
-    /*display: inline;
-    vertical-align: middle;*/ }
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 5em;
+    display: inline;
+    vertical-align: middle; }
+  .jumbotron img {
+    display: inline; }
 
 /*------------------------------------------------------/
 / Styles for clock section -----------------------------/
@@ -62,29 +64,18 @@ button {
 /*------------------------------------------------------/
 / Styles for sticky footer -----------------------------/
 /------------------------------------------------------*/
-.social-links {
-  margin-top: 50px; }
-  .social-links a {
-    text-decoration: none;
-    color: #424242; }
-  .social-links a:hover {
-    color: #ff554c; }
-  .social-links i {
-    display: inline; }
-  .social-links img {
-    display: block;
-    margin: 0 auto;
-    text-align: center; }
-
-/*------------------------------------------------------/
-/ Styles for sticky footer -----------------------------/
-/------------------------------------------------------*/
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 100px;
   background: #ff554c; }
   footer p {
     padding: 15px;
-    color: white; }
+    color: white;
+    margin-bottom: 0px; }
+  footer a {
+    text-decoration: none;
+    color: #ececec; }
+  footer a:hover {
+    color: #197f3c; }
