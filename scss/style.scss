@@ -99,6 +99,24 @@ button {
 / Styles for sticky footer -----------------------------/
 /------------------------------------------------------*/
 
+.social-links{
+	margin-top:50px;
+	a{
+		text-decoration: none;
+		color:$dark-grey;
+	}
+	a:hover{
+		color:$main-red;
+	}
+	i{
+		display:inline;
+	}
+}
+
+/*------------------------------------------------------/
+/ Styles for sticky footer -----------------------------/
+/------------------------------------------------------*/
+
 footer {
 	position:absolute;
 	bottom:0;
