@@ -18,6 +18,7 @@ html {
 
 body {
 	margin-bottom:100px;
+	font-family: 'Roboto', sans-serif;
 }
 
 /*------------------------------------------------------/
@@ -115,9 +116,9 @@ footer {
 	}
 	a{
 		text-decoration: none;
-		color:$dark-grey;
+		color:$subtle-grey-button;
 	}
 	a:hover{
-		color:$subtle-grey-button;
+		color:$start-green;
 	}
 }
