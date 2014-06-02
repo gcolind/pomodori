@@ -31,13 +31,13 @@ body {
 
 	h1{
 		color:$main-red;
-		display: inline;
-		vertical-align: middle;
+		/*display: inline;
+		vertical-align: middle;*/
 	}
 
-	img {
+	/*img {
 		display:inline;
-	}
+	}*/
 }
 
 /*------------------------------------------------------/
@@ -110,6 +110,11 @@ button {
 	}
 	i{
 		display:inline;
+	}
+	img{
+		display:block;
+		margin:0 auto;
+		text-align:center;
 	}
 }
 
