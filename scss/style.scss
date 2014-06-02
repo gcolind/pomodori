@@ -17,7 +17,7 @@ html {
 }
 
 body {
-	margin-bottom:60px;
+	margin-bottom:100px;
 }
 
 /*------------------------------------------------------/
@@ -31,13 +31,15 @@ body {
 
 	h1{
 		color:$main-red;
-		/*display: inline;
-		vertical-align: middle;*/
+		font-family: 'Noto Sans', sans-serif;
+		font-size:5em;
+		display: inline;
+		vertical-align: middle;
 	}
 
-	/*img {
+	img {
 		display:inline;
-	}*/
+	}
 }
 
 /*------------------------------------------------------/
@@ -99,38 +101,23 @@ button {
 / Styles for sticky footer -----------------------------/
 /------------------------------------------------------*/
 
-.social-links{
-	margin-top:50px;
-	a{
-		text-decoration: none;
-		color:$dark-grey;
-	}
-	a:hover{
-		color:$main-red;
-	}
-	i{
-		display:inline;
-	}
-	img{
-		display:block;
-		margin:0 auto;
-		text-align:center;
-	}
-}
-
-/*------------------------------------------------------/
-/ Styles for sticky footer -----------------------------/
-/------------------------------------------------------*/
-
 footer {
 	position:absolute;
 	bottom:0;
 	width:100%;
-	height:60px;
+	height:100px;
 	background:$main-red;
 
 	p{
 		padding:15px;
 		color:white;
+		margin-bottom: 0px;
+	}
+	a{
+		text-decoration: none;
+		color:$dark-grey;
+	}
+	a:hover{
+		color:$subtle-grey-button;
 	}
 }
